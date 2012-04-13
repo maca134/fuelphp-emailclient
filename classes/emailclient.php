@@ -1,12 +1,12 @@
 <?php
 
-namespace Pop3;
+namespace Emailclient;
 
 class NoConnectionException extends \FuelException {
     
 }
 
-class Pop3 {
+class Emailclient {
 
     /**
      * Instance for singleton usage.
@@ -51,7 +51,7 @@ class Pop3 {
      * Init, config loading.
      */
     public static function _init() {
-        \Config::load('pop3', true);
+        \Config::load('emailclient', true);
         static::$_defaults = \Config::get('pop3.defaults');
     }
 
